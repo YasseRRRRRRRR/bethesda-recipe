@@ -20,7 +20,7 @@ const TranslationDropDown = () => {
           {language} <ChevronDown className="size-4 ml-1.5" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-24">
         <DropdownMenuRadioGroup value={language} onValueChange={setLanguage}>
           <DropdownMenuRadioItem value="FI">finnish</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="SV">swedish</DropdownMenuRadioItem>
