@@ -2,6 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-2 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:ob-52">
           <div className="col-span-1 p-6 lg:px-0 lg:pt-4">
             <div className=" mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
+              <span className="block mb-4 text-xs md:text-sm text-violet-500 font-medium">
                 Better every day
               </span>
               <h1 className=" w-fit tracking-tight text-balance mt-8 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
@@ -28,7 +29,7 @@ export default function Home() {
                   })}
                 >
                   Start Cooking
-                  {/* <ArrowRight />  */}
+                  <ArrowRight className="size-4 ml-2" />
                 </Link>
               </div>
             </div>

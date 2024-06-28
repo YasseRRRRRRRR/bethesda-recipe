@@ -10,7 +10,7 @@ const NavBar = () => {
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
             <p>
-              <span className="text-indigo-600">Fantazy</span> Recipe
+              <span className="text-violet-600">Fantazy</span> Recipe
             </p>
           </Link>
           <div className="h-full flex justify-around items-center flex-end space-x-4">
