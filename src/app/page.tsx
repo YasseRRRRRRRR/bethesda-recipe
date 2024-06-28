@@ -38,7 +38,7 @@ export default function Home() {
       </section>
       <section className="bg-slate-100 py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
-          [section n02]
+          <div className="h-[700px] flex items-center">[section n02]</div>
         </MaxWidthWrapper>
       </section>
     </div>
