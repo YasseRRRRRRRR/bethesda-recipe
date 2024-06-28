@@ -1,6 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "./maxWidthWrapper";
 import Link from "next/link";
+import TranslationDropDown from "./translationDropDwon";
 
 const NavBar = () => {
   return (
@@ -13,9 +14,9 @@ const NavBar = () => {
             </p>
           </Link>
           <div className="h-full flex justify-around items-center flex-end space-x-4">
-            <a href="#">Test</a>
-            <a href="#">Test</a>
-            <a href="#">Test</a>
+            <a href="#">Inspiration</a>
+            <a href="#">Recipes</a>
+            <TranslationDropDown />
           </div>
         </div>
       </MaxWidthWrapper>

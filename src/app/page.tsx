@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
-import MaxWidthWrapper from "@/differentname/maxWidthWrapper";
-import ShuffleGrid from "@/differentname/shuffleGrid";
+import MaxWidthWrapper from "@/components/maxWidthWrapper";
+import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
 
 export default function Home() {
