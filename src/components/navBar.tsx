@@ -28,7 +28,15 @@ const NavBar = () => {
           <div className="h-full  flex justify-around items-center space-x-4">
             <div className=" hidden md:flex h-full justify-around gap-2 items-center flex-end space-x-4">
               <TranslationDropDown />
-              <a href="#">Inspiration</a>
+              <Link
+                href="/api/auth/register"
+                className={buttonVariants({
+                  size: "lg",
+                  variant: "secondary",
+                })}
+              >
+                Inspiration
+              </Link>
               <Link
                 href="/api/auth/register"
                 className={buttonVariants({
