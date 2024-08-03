@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 const TranslationDropDown = () => {
-  const [language, setLanguage] = useState("FI");
+  const [language, setLanguage] = useState("EN");
 
   return (
     <DropdownMenu>
