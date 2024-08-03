@@ -38,17 +38,10 @@ export default function Home() {
           <ShuffleGrid />
         </MaxWidthWrapper>
       </section>
-      <section
-        className="bg-slate-100 
-      
-      py-24
-      
-      "
-      >
-        {/* <MaxWidthWrapper className="relative overflow-hidden min-h-screen py-8"> */}
+
+      <div className="px-4 py-16 sm:px-6 lg:px-8 ">
         <Caroussel />
-        {/* </MaxWidthWrapper> */}
-      </section>
+      </div>
       <section>
         {/* <MaxWidthWrapper> */}
         <div className=" mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
