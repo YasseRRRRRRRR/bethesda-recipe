@@ -4,6 +4,7 @@ import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Caroussel from "@/components/caroussel";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -38,10 +39,25 @@ export default function Home() {
           <ShuffleGrid />
         </MaxWidthWrapper>
       </section>
-
-      <div className="px-4 py-16 sm:px-6 lg:px-8 ">
+      <section className="bg-violet-100 py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
+              Experience food like never before
+            </h2>
+            <Image
+              width={200}
+              height={200}
+              src="/circus.png"
+              alt="illustration of a man juggling somesort of bowling pins while on unicycle afore a red background, very on theme if I do say so myself"
+              className="order-0 lg:order-2 h-auto"
+            />
+          </div>
+        </MaxWidthWrapper>
+      </section>
+      <section className="flex items-center pb-24 bg-violet-100 justify-center">
         <Caroussel />
-      </div>
+      </section>
       <section>
         {/* <MaxWidthWrapper> */}
         <div className=" mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
