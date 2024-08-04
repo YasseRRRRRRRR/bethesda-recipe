@@ -38,7 +38,7 @@ const NavBar = () => {
                 Inspiration
               </Link>
               <Link
-                href="/api/auth/register"
+                href="/recipe"
                 className={buttonVariants({
                   size: "lg",
                 })}
