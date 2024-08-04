@@ -3,8 +3,10 @@ import Link from "next/link";
 import React from "react";
 import PocketBase from "pocketbase";
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
-import { buttonVariants } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Plus, Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import DropDown from "./component/dropDown";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -12,7 +14,9 @@ const getRecipes = async () => {
   const records = await pb.collection("recipes").getFullList({
     sort: "-created",
   });
-
+  // const resultList = await pb.collection("recipes").getList(1, 12, {
+  //   filter: 'created >= "2022-01-01 00:00:00"',
+  // });
   return records;
 };
 
@@ -66,6 +70,27 @@ const dummyData = [
     difficulty: 5,
     type: "Fallout",
   },
+  {
+    id: 7,
+    title: "test",
+    thumbnail: "/Orsimer Venison.jpg",
+    difficulty: 5,
+    type: "Fallout",
+  },
+  {
+    id: 7,
+    title: "test",
+    thumbnail: "/Orsimer Venison.jpg",
+    difficulty: 5,
+    type: "Fallout",
+  },
+  {
+    id: 7,
+    title: "test",
+    thumbnail: "/Orsimer Venison.jpg",
+    difficulty: 5,
+    type: "Fallout",
+  },
 ];
 
 export default async function RecipesPage() {
@@ -75,7 +100,7 @@ export default async function RecipesPage() {
       <MaxWidthWrapper>
         <div>
           <div className="py-16 sm:py-24">
-            <div className="py-6">
+            <div className="py-6 flex justify-between">
               <Link
                 href="/recipe"
                 className={buttonVariants({
@@ -85,6 +110,19 @@ export default async function RecipesPage() {
                 Add Suggestion
                 <Plus className="size-4 ml-2" />
               </Link>
+
+              {/* needs to be a filter later !!!!!!!!!!!!!! */}
+              <div className="flex items-center space-x-2">
+                <DropDown />
+                <Input
+                  type="text"
+                  className="px-3 py-2 w-80"
+                  placeholder="Search Recipe..."
+                />
+                <Button className="px-3 py-2">
+                  <Search className="w-6 h-6" />
+                </Button>
+              </div>
             </div>
             <h2 className="sr-only">Recipes</h2>
 
@@ -96,6 +134,16 @@ export default async function RecipesPage() {
                 <Recipe key={recipe.id} recipe={recipe} />
               ))}
             </div>
+            <div className="text-center mt-14">
+              <Link
+                href="/recipe"
+                className={buttonVariants({
+                  size: "lg",
+                })}
+              >
+                View More
+              </Link>
+            </div>
           </div>
         </div>
       </MaxWidthWrapper>
@@ -104,14 +152,7 @@ export default async function RecipesPage() {
 }
 
 const Recipe = ({ recipe }: any) => {
-  const {
-    id,
-    title,
-
-    thumbnail,
-    difficulty,
-    type,
-  } = recipe || {};
+  const { id, title, thumbnail, difficulty, type } = recipe || {};
 
   return (
     <Link href={`/recipe/${id}`} className="group">
