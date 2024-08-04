@@ -53,7 +53,7 @@ const RecipePage = async ({ params }: any) => {
             className="w-[400px]"
             dangerouslySetInnerHTML={{ __html: description }}
           ></div> */}
-          <Tabs defaultValue="account" className="w-[400px] ">
+          <Tabs defaultValue="Instructions" className="w-[400px] ">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="Ingredients">Ingredients</TabsTrigger>
               <TabsTrigger value="Instructions">Instructions</TabsTrigger>
@@ -70,12 +70,7 @@ const RecipePage = async ({ params }: any) => {
                 <CardContent
                   className="space-y-2"
                   dangerouslySetInnerHTML={{ __html: ingredients }}
-                >
-                  {/* <h3
-                    className="my-8"
-                    
-                  /> */}
-                </CardContent>
+                ></CardContent>
               </Card>
             </TabsContent>
             <TabsContent value="Instructions">
