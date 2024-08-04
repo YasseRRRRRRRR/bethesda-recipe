@@ -1,7 +1,7 @@
 import React from "react";
 import PocketBase from "pocketbase";
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import {
   Card,
@@ -14,6 +14,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -36,24 +38,20 @@ const RecipePage = async ({ params }: any) => {
 
   return (
     <MaxWidthWrapper>
-      <div className="mt-40 mb-20 flex gap-8">
-        <div>
-          <h2 className="mb-8">{title}</h2>
+      <div className="mt-40 mb-20 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:gap-x-8 ">
+        <div className="flex flex-col items-center md:items-start">
+          <h2 className="mb-8 text-violet-500 text-4xl md:text-2xl font-serif">
+            {title}
+          </h2>
           <Image
             src={pb.files.getUrl(recipe, thumbnail)}
             alt={`${title} Thumbnail`}
-            // className="h-full w-full object-cover object-center group-hover:opacity-75"
             width={500}
             height={300}
           />
         </div>
-        <div className=" max-w-auto">
-          {/* <h2 className="mb-">Description</h2>
-          <div
-            className="w-[400px]"
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></div> */}
-          <Tabs defaultValue="Instructions" className="w-[400px] ">
+        <div className=" max-w-auto sm:w-[500px] flex flex-col justify-self-center ">
+          <Tabs defaultValue="Ingredients">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="Ingredients">Ingredients</TabsTrigger>
               <TabsTrigger value="Instructions">Instructions</TabsTrigger>
@@ -77,24 +75,26 @@ const RecipePage = async ({ params }: any) => {
               <Card>
                 <CardHeader>
                   <CardTitle>Instructions</CardTitle>
-                  {/* <CardDescription>
-                    Change your password here. After saving, you&apos;ll be
-                    logged out.
-                  </CardDescription> */}
                 </CardHeader>
                 <CardContent
                   className="space-y-2"
                   dangerouslySetInnerHTML={{ __html: steps }}
                 ></CardContent>
+                <CardFooter>
+                  <Link
+                    href={link_to_video}
+                    className={buttonVariants({
+                      size: "lg",
+                    })}
+                  >
+                    Watch instructional video
+                    <ArrowRight className="size-4 ml-2" />
+                  </Link>
+                </CardFooter>
               </Card>
             </TabsContent>
           </Tabs>
         </div>
-
-        <ul className="mt-4">
-          <li className="text-xl"></li>
-        </ul>
-        {/* <a href={link_to_video}> watch</a> */}
       </div>
     </MaxWidthWrapper>
   );
