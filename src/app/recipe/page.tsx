@@ -100,7 +100,7 @@ export default async function RecipesPage() {
       <MaxWidthWrapper>
         <div>
           <div className="py-16 sm:py-24">
-            <div className="py-6 flex justify-between">
+            <div className="py-6 flex justify-between flex-col lg:flex-row gap-6">
               <Link
                 href="/recipe"
                 className={buttonVariants({
@@ -112,16 +112,18 @@ export default async function RecipesPage() {
               </Link>
 
               {/* needs to be a filter later !!!!!!!!!!!!!! */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2 justify-between">
                 <DropDown />
-                <Input
-                  type="text"
-                  className="px-3 py-2 w-80"
-                  placeholder="Search Recipe..."
-                />
-                <Button className="px-3 py-2">
-                  <Search className="w-6 h-6" />
-                </Button>
+                <div className="flex gap-2">
+                  <Input
+                    type="text"
+                    className="px-3 py-2 w-80"
+                    placeholder="Search Recipe..."
+                  />
+                  <Button className="px-3 py-2">
+                    <Search className="w-6 h-6" />
+                  </Button>
+                </div>
               </div>
             </div>
             <h2 className="sr-only">Recipes</h2>
