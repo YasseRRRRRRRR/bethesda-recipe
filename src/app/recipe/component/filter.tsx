@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const filterParams = [
+  { name: "All", value: "all" },
   { name: "Basics", value: "basics" },
   { name: "Main Course", value: "main_course" },
   { name: "Baked Goods", value: "baked_goods" },
@@ -23,7 +24,6 @@ const filterParams = [
   { name: "Soup & Stews", value: "soup_stews" },
   { name: "Desserts", value: "desserts" },
   { name: "Drinks", value: "drinks" },
-  { name: "All", value: "" },
 ];
 const FilterationSystem = () => {
   const [filter, setFilter] = useState("all");
@@ -67,7 +67,7 @@ const FilterationSystem = () => {
           <DropdownMenuLabel>Recipe&apos;s type</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup
-            defaultValue=""
+            defaultValue="all"
             value={filter}
             onValueChange={(e) => handleFilter(e)}
           >

@@ -12,7 +12,9 @@ const pb = new PocketBase("http://127.0.0.1:8090");
 const getRecipes = async (query: string, category: string) => {
   pb.autoCancellation(false);
   const resultList = await pb.collection("recipes").getList(1, 12, {
-    filter: `title ~ "${query}" && type = "${category}"`,
+    filter: `title ~ "${query}" ${
+      category != "all" ? `&& type = "${category}"` : ""
+    }`,
   });
   return resultList.items;
 };
