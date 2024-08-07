@@ -29,7 +29,7 @@ const NavBar = () => {
             <div className=" hidden md:flex h-full justify-around gap-2 items-center flex-end space-x-4">
               <TranslationDropDown />
               <Link
-                href="/api/auth/register"
+                href="/"
                 className={buttonVariants({
                   size: "lg",
                   variant: "secondary",
@@ -55,10 +55,28 @@ const NavBar = () => {
                   </Button>
                 </SheetTrigger>
                 <SheetContent className="z-[101]">
-                  <div className="my-8 flex flex-col gap-2 items-start">
-                    <a href="#">Inspiration</a>
-                    <a href="#">Recipes</a>
-                    <TranslationDropDown />
+                  <div className="my-8 flex flex-col gap-2 items-start justify-start ">
+                    <Link
+                      href="/recipe"
+                      className={buttonVariants({
+                        size: "lg",
+                        variant: "link",
+                      })}
+                    >
+                      Inspiration
+                    </Link>
+                    <Link
+                      href="/recipe"
+                      className={buttonVariants({
+                        size: "lg",
+                        variant: "link",
+                      })}
+                    >
+                      Recipes
+                    </Link>
+                    <div className="mx-[30px]">
+                      <TranslationDropDown />
+                    </div>
                   </div>
                 </SheetContent>
               </Sheet>

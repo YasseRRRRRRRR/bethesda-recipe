@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import PocketBase from "pocketbase";
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,9 +11,10 @@ const pb = new PocketBase("http://127.0.0.1:8090");
 
 const getRecipes = async (query: string, category: string) => {
   pb.autoCancellation(false);
+  // Corrected the conditional expression to ensure both conditions must be met
   const resultList = await pb.collection("recipes").getList(1, 12, {
     filter: `title ~ "${query}" ${
-      category != "all" ? `&& type = "${category}"` : ""
+      category !== "" && category !== "all" ? `&& type = "${category}"` : ""
     }`,
   });
   return resultList.items;

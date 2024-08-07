@@ -3,10 +3,9 @@ import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Caroussel from "@/components/caroussel";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="bg-slate-50">
       <section>
@@ -14,10 +13,10 @@ export default function Home() {
           <div className="col-span-1 p-6 lg:px-0 lg:pt-4">
             <div className=" mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="block mb-4 text-xs md:text-sm text-violet-500 font-medium">
-                Better every day
+                Experience food like never before
               </span>
               <h1 className=" w-fit tracking-tight text-balance mt-8 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
-                Bringing the Flavors of Tamriel to Your Table
+                Bringing the Flavors of Tamriel
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 Experience the rich culinary traditions of Tamriel, with recipes
@@ -47,7 +46,7 @@ export default function Home() {
             <div className="flex flex-wrap -m-4">
               <h2 className="px-4 py-10 tracking-tight xl:text-center text-balance leading-tight font-semibold text-3xl md:text-5xl text-violet-900">
                 {/* Dive Deeper Into The Lore Of Your Favorite Wordthing */}
-                Discover Delicious And Lore-Friendly Recipes and Adapt Them with
+                Discover Delicious And Lore-Friendly Recipes and Adapted with
                 Local Ingredients
               </h2>
               <div className="p-4 md:w-1/3">
