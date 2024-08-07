@@ -9,10 +9,10 @@ import FilterationSystem from "./component/filter";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
-const getRecipes = async (query: string) => {
+const getRecipes = async (query: string, category: string) => {
   pb.autoCancellation(false);
   const resultList = await pb.collection("recipes").getList(1, 12, {
-    filter: `title ~ "${query}"`,
+    filter: `title ~ "${query}" && type = "${category}"`,
   });
   return resultList.items;
 };
@@ -90,32 +90,24 @@ const dummyData = [
   },
 ];
 
-const filterParams = [
-  "basics",
-  "main_course",
-  "baked_goods",
-  "sides_starters_snacks",
-  "soup_stews",
-  "desserts",
-  "drinks",
-  "all",
-];
-
 const RecipesPage = async ({
   searchParams,
 }: {
-  searchParams?: { query?: string; page?: string };
+  searchParams?: { query?: string; category?: string; page?: string };
 }) => {
   const query = searchParams?.query || "";
-  const recipes = await getRecipes(query);
+  const category = searchParams?.category || "";
+
+  const recipes = await getRecipes(query, category);
   return (
     <section className="bg-slate-100">
       <MaxWidthWrapper>
         <div>
           <div className="py-16 sm:py-24">
             <div className="py-6 flex justify-between flex-col lg:flex-row gap-6">
+              {/* make the form */}
               <Link
-                href="/recipe"
+                href=""
                 className={buttonVariants({
                   size: "lg",
                 })}
@@ -124,7 +116,6 @@ const RecipesPage = async ({
                 <Plus className="size-4 ml-2" />
               </Link>
 
-              {/* needs to be a filter later !!!!!!!!!!!!!! */}
               <FilterationSystem />
             </div>
             <h2 className="sr-only">Recipes</h2>

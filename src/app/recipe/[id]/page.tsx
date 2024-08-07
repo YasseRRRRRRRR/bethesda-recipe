@@ -38,6 +38,7 @@ const RecipePage = async ({ params }: any) => {
 
   return (
     <MaxWidthWrapper className="mt-40 mb-20">
+      <p>{type}</p>
       <nav aria-label="Breadcrumb" className="pb-2">
         <ol className="flex items-center gap-1 text-sm text-gray-600">
           <li>

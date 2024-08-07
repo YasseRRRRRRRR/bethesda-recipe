@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -15,9 +15,19 @@ import { ChevronDown, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
+const filterParams = [
+  { name: "Basics", value: "basics" },
+  { name: "Main Course", value: "main_course" },
+  { name: "Baked Goods", value: "baked_goods" },
+  { name: "Sides, Starters & snacks", value: "sides_starters_snacks" },
+  { name: "Soup & Stews", value: "soup_stews" },
+  { name: "Desserts", value: "desserts" },
+  { name: "Drinks", value: "drinks" },
+  { name: "All", value: "" },
+];
 const FilterationSystem = () => {
   const [filter, setFilter] = useState("all");
-
+  const categoryParams = useSearchParams();
   // handling Search
   const searchParams = useSearchParams();
   const pathName = usePathname();
@@ -29,6 +39,17 @@ const FilterationSystem = () => {
       params.set("query", value);
     } else {
       params.delete("query");
+    }
+    replace(`${pathName}?${params.toString()}`);
+  };
+
+  const handleFilter = (value: string) => {
+    setFilter(value);
+    const params = new URLSearchParams(categoryParams);
+    if (value) {
+      params.set("category", value);
+    } else {
+      params.delete("category");
     }
     replace(`${pathName}?${params.toString()}`);
   };
@@ -46,41 +67,20 @@ const FilterationSystem = () => {
           <DropdownMenuLabel>Recipe&apos;s type</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup
-            defaultValue="all"
+            defaultValue=""
             value={filter}
-            onValueChange={setFilter}
+            onValueChange={(e) => handleFilter(e)}
           >
-            <DropdownMenuRadioItem value="all">All</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="basics">Basics</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="main_course">
-              Main Courses
-            </DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="baked_goods">
-              Baked Goods
-            </DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="sides_starters_snacks">
-              Sides, Starters & snacks
-            </DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="soup_stews">
-              Soup & Stews
-            </DropdownMenuRadioItem>
+            {filterParams.map((filter, index) => (
+              <DropdownMenuRadioItem key={index} value={filter.value}>
+                {filter.name}
+              </DropdownMenuRadioItem>
+            ))}
           </DropdownMenuRadioGroup>
         </DropdownMenuContent>
       </DropdownMenu>
 
       {/* search bar */}
-      {/* <div className="flex gap-2">
-        <Input
-          type="text"
-          className="px-3 py-2 w-80"
-          placeholder="Search Recipe..."
-          onChange={(e) => handleSearch(e.target.value)}
-          defaultValue={searchParams.get("query")?.toString()}
-        />
-        <Button className="px-3 py-2">
-          <Search className="w-6 h-6" />
-        </Button>
-      </div> */}
       <div className="relative w-80">
         <Search className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-500 left-3" />
         <Input
