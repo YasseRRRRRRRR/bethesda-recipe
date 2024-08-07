@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight, House } from "lucide-react";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -37,10 +37,44 @@ const RecipePage = async ({ params }: any) => {
   } = recipe || {};
 
   return (
-    <MaxWidthWrapper>
-      <div className="mt-40 mb-20 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:gap-x-8 ">
+    <MaxWidthWrapper className="mt-40 mb-20">
+      <nav aria-label="Breadcrumb" className="pb-2">
+        <ol className="flex items-center gap-1 text-sm text-gray-600">
+          <li>
+            <Link href="/" className="block transition hover:text-gray-700">
+              <span className="sr-only"> Home </span>
+              <House className="h-4 w-4" />
+            </Link>
+          </li>
+          <li>
+            <ChevronRight className="h-4 w-4" />
+          </li>
+
+          <li>
+            <Link
+              href="/recipe"
+              className="block transition hover:text-gray-700"
+            >
+              {" "}
+              Recipes{" "}
+            </Link>
+          </li>
+
+          <li>
+            <ChevronRight className="h-4 w-4" />
+          </li>
+
+          <li>
+            <Link href="" className="block transition hover:text-gray-700">
+              {" "}
+              {title}{" "}
+            </Link>
+          </li>
+        </ol>
+      </nav>
+      <div className=" grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:gap-x-8 ">
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="mb-8 text-violet-500 text-4xl md:text-2xl font-serif">
+          <h2 className="mb-8 text-violet-500 text-4xl md:text-2xl font-semibold">
             {title}
           </h2>
           <Image
@@ -63,7 +97,7 @@ const RecipePage = async ({ params }: any) => {
             <TabsContent value="Ingredients">
               <Card>
                 <CardHeader>
-                  <CardTitle>Ingredients</CardTitle>
+                  <CardTitle className="text-violet-600">Ingredients</CardTitle>
                 </CardHeader>
                 <CardContent
                   className="space-y-2"
@@ -74,7 +108,9 @@ const RecipePage = async ({ params }: any) => {
             <TabsContent value="Instructions">
               <Card>
                 <CardHeader>
-                  <CardTitle>Instructions</CardTitle>
+                  <CardTitle className="text-violet-600">
+                    Instructions
+                  </CardTitle>
                 </CardHeader>
                 <CardContent
                   className="space-y-2"
