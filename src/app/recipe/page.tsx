@@ -118,7 +118,7 @@ const RecipesPage = async ({
   const query = searchParams?.query || "";
   const category = searchParams?.category || "";
   const page = parseInt(searchParams?.page || "1", 10);
-  const itemsPerPage = 16; // Define your preferred items per page
+  const itemsPerPage = 12;
 
   const { items: recipes, totalItems } = await getRecipes(
     query,
@@ -135,7 +135,7 @@ const RecipesPage = async ({
         <div>
           <div className="py-16 sm:py-24">
             <div className="py-6 flex justify-between flex-col lg:flex-row gap-6">
-              {/* make the form */}
+              {/* make the form for suggestions*/}
               <Link
                 href=""
                 className={buttonVariants({

@@ -53,37 +53,28 @@ export default async function Home() {
                   <Image
                     width={700}
                     height={400}
-                    src="/fallout.jpg"
+                    src="/seasoning.jpg"
                     alt="blog"
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      CATEGORY
+                      Basics
                     </h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      The Catalyzer
+                      Nord Spice
                     </h1>
                     <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
+                      From Basic, and essential spice blends.
                     </p>
                     <div className="flex items-center flex-wrap ">
-                      <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                      <Link
+                        href="/recipe/r92gce9sqgb0wjl"
+                        className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                      >
                         Learn More
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
+                        <ArrowRight className="size-4 ml-2" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -93,77 +84,59 @@ export default async function Home() {
                   <Image
                     width={700}
                     height={400}
-                    src="/fallout.jpg"
+                    src="/main_courses.jpg"
                     alt="blog"
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      CATEGORY
+                      Main Courses
                     </h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      The 400 Blows
+                      Feasts
                     </h1>
                     <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
+                      To Incredible full course meals
+                    </p>
+                    <div className="flex items-center flex-wrap ">
+                      <Link
+                        href="/recipe?category=main_course"
+                        className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                      >
+                        Learn More
+                        <ArrowRight className="size-4 ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <Image
+                    width={700}
+                    height={400}
+                    src="/sweetrolls.jpg"
+                    alt="blog"
+                    className="lg:h-48 md:h-36 w-full object-cover object-center "
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                      Desserts
+                    </h2>
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                      Sweetrolls
+                    </h1>
+                    <p className="leading-relaxed mb-3">
+                      all the way to iconic and delicious sweets.
                     </p>
                     <div className="flex items-center flex-wrap">
-                      <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                      <Link
+                        href="/recipe/lkfcrxn2zur8ivn"
+                        className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                      >
                         Learn More
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4 md:w-1/3">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <Image
-                    width={700}
-                    height={400}
-                    src="/fallout.jpg"
-                    alt="blog"
-                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  />
-                  <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      CATEGORY
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Shooting Stars
-                    </h1>
-                    <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
-                    </p>
-                    <div className="flex items-center flex-wrap ">
-                      <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                        Learn More
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
+                        <ArrowRight className="size-4 ml-2" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -178,8 +151,9 @@ export default async function Home() {
             <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
               <div className="relative z-10 lg:py-16">
                 <div className="relative h-64 sm:h-80 lg:h-full">
+                  {/* MaKe this using next js Image comp */}
                   <img
-                    alt=""
+                    alt="The Official Elder Scrolls cookbook"
                     src="/ES_book_cover.jpg"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
@@ -199,7 +173,6 @@ export default async function Home() {
                     book The Elder Scrolls: The Official Cookbook by Chelsea
                     Monroe-Cassel. So be sure to grab yourself a copy
                   </p>
-                  {/*  */}
                   <Link
                     href="https://www.amazon.com/Elder-Scrolls-Official-Cookbook/dp/B097FCHJG9"
                     className={buttonVariants({
