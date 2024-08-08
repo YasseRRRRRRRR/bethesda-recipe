@@ -6,17 +6,35 @@ import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import FilterationSystem from "./component/filter";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
-const getRecipes = async (query: string, category: string) => {
+const getRecipes = async (
+  query: string,
+  category: string,
+  page: number,
+  itemsPerPage: number
+) => {
   pb.autoCancellation(false);
-  const resultList = await pb.collection("recipes").getList(1, 100, {
-    filter: `title ~ "${query}" ${
-      category !== "" && category !== "all" ? `&& type = "${category}"` : ""
-    }`,
-  });
-  return resultList.items;
+  const offset = (page - 1) * itemsPerPage;
+  const resultList = await pb
+    .collection("recipes")
+    .getList(page, itemsPerPage, {
+      filter: `title ~ "${query}" ${
+        category !== "" && category !== "all" ? `&& type = "${category}"` : ""
+      }`,
+      offset,
+    });
+  return { items: resultList.items, totalItems: resultList.totalItems };
 };
 
 const dummyData = [
@@ -99,8 +117,18 @@ const RecipesPage = async ({
 }) => {
   const query = searchParams?.query || "";
   const category = searchParams?.category || "";
+  const page = parseInt(searchParams?.page || "1", 10);
+  const itemsPerPage = 16; // Define your preferred items per page
 
-  const recipes = await getRecipes(query, category);
+  const { items: recipes, totalItems } = await getRecipes(
+    query,
+    category,
+    page,
+    itemsPerPage
+  );
+
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
   return (
     <section className="bg-slate-100">
       <MaxWidthWrapper>
@@ -131,14 +159,30 @@ const RecipesPage = async ({
               ))} */}
             </div>
             <div className="text-center mt-14">
-              <Link
-                href="/recipe"
-                className={buttonVariants({
-                  size: "lg",
-                })}
-              >
-                View More
-              </Link>
+              <Pagination>
+                <PaginationContent>
+                  {page > 1 && (
+                    <PaginationItem>
+                      <PaginationPrevious href={`?page=${page - 1}`} />
+                    </PaginationItem>
+                  )}
+                  {[...Array(totalPages)].map((_, index) => (
+                    <PaginationItem key={index}>
+                      <PaginationLink
+                        href={`?page=${index + 1}`}
+                        isActive={index + 1 === page}
+                      >
+                        {index + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  {page < totalPages && (
+                    <PaginationItem>
+                      <PaginationNext href={`?page=${page + 1}`} />
+                    </PaginationItem>
+                  )}
+                </PaginationContent>
+              </Pagination>
             </div>
           </div>
         </div>

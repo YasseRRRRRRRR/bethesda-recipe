@@ -23,6 +23,7 @@ const getSingleRecipe = async (recipeId: string) => {
   const record = await pb.collection("recipes").getOne(recipeId);
   return record;
 };
+
 const RecipePage = async ({ params }: any) => {
   const recipe = await getSingleRecipe(params.id);
   const {
@@ -38,8 +39,8 @@ const RecipePage = async ({ params }: any) => {
 
   return (
     <MaxWidthWrapper className="mt-40 mb-20">
-      <nav aria-label="Breadcrumb" className="pb-2">
-        <ol className="flex items-center gap-1 text-sm text-gray-600">
+      <nav aria-label="Breadcrumb" className="pb-2 ">
+        <ol className="flex  items-center gap-1 text-sm text-gray-600">
           <li>
             <Link href="/" className="block transition hover:text-gray-700">
               <span className="sr-only"> Home </span>
@@ -72,19 +73,20 @@ const RecipePage = async ({ params }: any) => {
           </li>
         </ol>
       </nav>
-      <div className=" grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:gap-x-8 ">
-        <div className="flex flex-col items-start">
-          <h2 className="mb-8 text-violet-500 text-4xl md:text-2xl font-semibold">
+      <div className=" grid grid-cols-1 gap-x-6 gap-y-10 xl:grid-cols-2 xl:gap-x-8 ">
+        <div className="flex flex-col ">
+          <h2 className="mb-8 text-violet-500 text-2xl xl:text-3xl md:text-4xl font-semibold">
             {title}
           </h2>
           <Image
             src={pb.files.getUrl(recipe, thumbnail)}
-            alt={`${title} Thumbnail`}
+            alt={`an image of the ${title}`}
             width={500}
             height={300}
+            className="self-center xl:self-start"
           />
         </div>
-        <div className=" max-w-auto sm:w-[500px] flex flex-col justify-self-center ">
+        <div className=" max-w-auto sm:w-[32rem] flex flex-col justify-self-center ">
           <Tabs defaultValue="Ingredients">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="Ingredients">Ingredients</TabsTrigger>
