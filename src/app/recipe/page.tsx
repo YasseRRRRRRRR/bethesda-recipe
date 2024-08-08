@@ -37,79 +37,6 @@ const getRecipes = async (
   return { items: resultList.items, totalItems: resultList.totalItems };
 };
 
-const dummyData = [
-  {
-    id: 1,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 2,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 3,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 4,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 5,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 6,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 7,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 7,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  {
-    id: 7,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
-  // {
-  //   id: 7,
-  //   title: "test",
-  //   thumbnail: "/Orsimer Venison.jpg",
-  //   difficulty: 5,
-  //   type: "Fallout",
-  // },
-];
-
 const RecipesPage = async ({
   searchParams,
 }: {
@@ -154,9 +81,6 @@ const RecipesPage = async ({
               {recipes.map((recipe) => (
                 <Recipe key={recipe.id} recipe={recipe} />
               ))}
-              {/* {dummyData.map((recipe) => (
-                <Recipe key={recipe.id} recipe={recipe} />
-              ))} */}
             </div>
             <div className="text-center mt-14">
               <Pagination>
@@ -198,12 +122,7 @@ const Recipe = ({ recipe }: any) => {
     <Link href={`/recipe/${id}`} className="group">
       <div className="  aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
         <Image
-          // CHANGE THIS !!!!!!!!!!!!!!!!!!!
-          src={
-            pb.files.getUrl(recipe, thumbnail)
-              ? pb.files.getUrl(recipe, thumbnail)
-              : thumbnail
-          }
+          src={pb.files.getUrl(recipe, thumbnail)}
           alt={`${title} Thumbnail`}
           className="h-full w-full object-cover object-center group-hover:opacity-75"
           width={500}

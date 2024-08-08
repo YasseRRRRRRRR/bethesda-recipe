@@ -37,8 +37,10 @@ const FilterationSystem = () => {
     const params = new URLSearchParams(searchParams);
     if (value) {
       params.set("query", value);
+      params.set("page", "1");
     } else {
       params.delete("query");
+      params.set("page", "1");
     }
     replace(`${pathName}?${params.toString()}`);
   };
@@ -47,12 +49,15 @@ const FilterationSystem = () => {
     const params = new URLSearchParams(categoryParams);
     if (value) {
       params.set("category", value);
+      params.set("page", "1");
     } else {
       params.delete("category");
+      params.set("page", "1");
     }
     replace(`${pathName}?${params.toString()}`);
   };
 
+  // HACK Find a more elegent way to do this
   useEffect(() => {
     const category = categoryParams.get("category");
     if (category) {

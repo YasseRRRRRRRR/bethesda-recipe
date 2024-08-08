@@ -26,8 +26,8 @@ const NavBar = () => {
             </p>
           </Link>
           <div className="h-full  flex justify-around items-center space-x-4">
+            <TranslationDropDown />
             <div className=" hidden md:flex h-full justify-around gap-2 items-center flex-end space-x-4">
-              <TranslationDropDown />
               <Link
                 href="/"
                 className={buttonVariants({
@@ -74,9 +74,9 @@ const NavBar = () => {
                     >
                       Recipes
                     </Link>
-                    <div className="mx-[30px]">
+                    {/* <div className="mx-[30px]">
                       <TranslationDropDown />
-                    </div>
+                    </div> */}
                   </div>
                 </SheetContent>
               </Sheet>

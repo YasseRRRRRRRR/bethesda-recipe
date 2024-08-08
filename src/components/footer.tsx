@@ -18,19 +18,19 @@ const Footer = () => {
           <div className="flex items-center justify-center">
             <div className="flex space-x-8">
               <Link
-                href="#"
+                href="/policies/terms-of-service"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 Terms
               </Link>
               <Link
-                href="#"
+                href="/policies/privacy-policy"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="#"
+                href="/recipe/isycr5h0s0mqvw0"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 Cookie Policy
