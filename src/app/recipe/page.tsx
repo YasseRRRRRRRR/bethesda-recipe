@@ -11,8 +11,7 @@ const pb = new PocketBase("http://127.0.0.1:8090");
 
 const getRecipes = async (query: string, category: string) => {
   pb.autoCancellation(false);
-  // Corrected the conditional expression to ensure both conditions must be met
-  const resultList = await pb.collection("recipes").getList(1, 12, {
+  const resultList = await pb.collection("recipes").getList(1, 100, {
     filter: `title ~ "${query}" ${
       category !== "" && category !== "all" ? `&& type = "${category}"` : ""
     }`,
@@ -84,13 +83,13 @@ const dummyData = [
     difficulty: 5,
     type: "Fallout",
   },
-  {
-    id: 7,
-    title: "test",
-    thumbnail: "/Orsimer Venison.jpg",
-    difficulty: 5,
-    type: "Fallout",
-  },
+  // {
+  //   id: 7,
+  //   title: "test",
+  //   thumbnail: "/Orsimer Venison.jpg",
+  //   difficulty: 5,
+  //   type: "Fallout",
+  // },
 ];
 
 const RecipesPage = async ({

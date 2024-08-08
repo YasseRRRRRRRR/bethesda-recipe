@@ -44,7 +44,7 @@ export default async function Home() {
         <div className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="container px-5 py-12 mx-auto">
             <div className="flex flex-wrap -m-4">
-              <h2 className="px-4 py-10 tracking-tight xl:text-center text-balance leading-tight font-semibold text-3xl md:text-5xl text-violet-900">
+              <h2 className="px-4 py-10 tracking-tight lg:text-center text-balance leading-tight font-semibold text-3xl md:text-5xl text-violet-900">
                 {/* Dive Deeper Into The Lore Of Your Favorite Wordthing */}
                 Discover Delicious And Lore-Friendly Recipes and Adapted with
                 Local Ingredients

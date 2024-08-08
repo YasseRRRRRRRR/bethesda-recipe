@@ -116,17 +116,19 @@ const RecipePage = async ({ params }: any) => {
                   className="space-y-2"
                   dangerouslySetInnerHTML={{ __html: steps }}
                 ></CardContent>
-                <CardFooter>
-                  <Link
-                    href={link_to_video}
-                    className={buttonVariants({
-                      size: "lg",
-                    })}
-                  >
-                    Watch instructional video
-                    <ArrowRight className="size-4 ml-2" />
-                  </Link>
-                </CardFooter>
+                {link_to_video && (
+                  <CardFooter>
+                    <Link
+                      href={link_to_video}
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      Watch instructional video
+                      <ArrowRight className="size-4 ml-2" />
+                    </Link>
+                  </CardFooter>
+                )}
               </Card>
             </TabsContent>
           </Tabs>

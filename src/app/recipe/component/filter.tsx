@@ -44,7 +44,6 @@ const FilterationSystem = () => {
   };
 
   const handleFilter = (value: string) => {
-    setFilter(value);
     const params = new URLSearchParams(categoryParams);
     if (value) {
       params.set("category", value);
@@ -53,6 +52,13 @@ const FilterationSystem = () => {
     }
     replace(`${pathName}?${params.toString()}`);
   };
+
+  useEffect(() => {
+    const category = categoryParams.get("category");
+    if (category) {
+      setFilter(category);
+    }
+  }, [categoryParams]);
 
   return (
     <div className="flex items-center gap-2 justify-between">
@@ -67,7 +73,7 @@ const FilterationSystem = () => {
           <DropdownMenuLabel>Recipe&apos;s type</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup
-            defaultValue="all"
+            defaultValue={categoryParams.get("category")?.toString()}
             value={filter}
             onValueChange={(e) => handleFilter(e)}
           >
