@@ -33,6 +33,8 @@ const RecipePage = async ({ params }: any) => {
     thumbnail,
     ingredients,
     steps,
+    // prep / marinade: prep
+    // coooking time/ brewing/ steeping depending on type: cooking
     difficulty,
     type,
   } = recipe || {};
