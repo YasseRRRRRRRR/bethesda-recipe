@@ -29,7 +29,7 @@ const NavBar = () => {
             <TranslationDropDown />
             <div className=" hidden md:flex h-full justify-around gap-2 items-center flex-end space-x-4">
               <Link
-                href="/"
+                href="/inspiration"
                 className={buttonVariants({
                   size: "lg",
                   variant: "secondary",
