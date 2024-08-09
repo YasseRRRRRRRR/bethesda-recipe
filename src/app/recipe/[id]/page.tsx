@@ -75,7 +75,7 @@ const RecipePage = async ({ params }: any) => {
           </li>
         </ol>
       </nav>
-      <div className=" grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8 ">
+      <div className=" grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:gap-x-8 ">
         <div className="flex flex-col ">
           <h2 className="mb-8 text-violet-500 text-2xl xl:text-3xl md:text-4xl font-semibold">
             {title}
@@ -88,7 +88,7 @@ const RecipePage = async ({ params }: any) => {
             className="self-center xl:self-start"
           />
         </div>
-        <div className=" max-w-auto w-[32rem] sm:w-auto flex flex-col justify-self-center ">
+        <div className=" max-w-auto w-auto max-w-[32rem] flex flex-col justify-self-center ">
           <Tabs defaultValue="Ingredients">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="Ingredients">Ingredients</TabsTrigger>
