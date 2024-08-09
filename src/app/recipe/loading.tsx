@@ -1,7 +1,7 @@
-import React from "react";
 import { LoaderCircle } from "lucide-react";
+import React from "react";
 
-function Loading() {
+const Loading = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-75">
       <div className="loader">
@@ -10,6 +10,6 @@ function Loading() {
       </div>
     </div>
   );
-}
+};
 
 export default Loading;
