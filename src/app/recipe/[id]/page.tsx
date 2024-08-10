@@ -22,7 +22,7 @@ const pb = new PocketBase("http://127.0.0.1:8090");
 const getSingleRecipe = async (recipeId: string) => {
   const record = await pb.collection("recipes").getOne(recipeId);
   // to test loading.tsx
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   return record;
 };
 

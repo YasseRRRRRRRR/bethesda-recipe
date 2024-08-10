@@ -57,7 +57,7 @@ const NavBar = () => {
                 <SheetContent className="z-[101]">
                   <div className="my-8 flex flex-col gap-2 items-start justify-start ">
                     <Link
-                      href="/recipe"
+                      href="/inspiration"
                       className={buttonVariants({
                         size: "lg",
                         variant: "link",
