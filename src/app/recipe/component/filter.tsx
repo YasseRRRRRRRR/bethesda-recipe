@@ -31,7 +31,7 @@ const FilterationSystem = (isLoading: any) => {
   const [filter, setFilter] = useState("all");
 
   // handling Search
-  const categoryParams = useSearchParams();
+  // const categoryParams = useSearchParams();
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const { replace } = useRouter();
@@ -39,19 +39,17 @@ const FilterationSystem = (isLoading: any) => {
   const handleSearch = (value: string) => {
     const params = new URLSearchParams(searchParams);
     if (value) {
-      setIsFilter(true);
       params.set("query", value);
       params.set("page", "1");
     } else {
       params.delete("query");
       params.set("page", "1");
-      setIsFilter(false);
     }
     replace(`${pathName}?${params.toString()}`);
   };
 
   const handleFilter = (value: string) => {
-    const params = new URLSearchParams(categoryParams);
+    const params = new URLSearchParams(searchParams);
     if (value) {
       setIsFilter(true);
       params.set("category", value);
@@ -75,11 +73,12 @@ const FilterationSystem = (isLoading: any) => {
 
   // HACK Find a more elegent way to do this
   useEffect(() => {
-    const category = categoryParams.get("category");
+    const category = searchParams.get("category");
     if (category) {
       setFilter(category);
+      setIsFilter(true);
     }
-  }, [categoryParams]);
+  }, [searchParams]);
 
   return (
     <div className="flex items-center gap-2 justify-between">

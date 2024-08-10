@@ -17,7 +17,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import SkeletonRecipe from "@/components/skeletonRecipe";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Loading = () => {
@@ -52,8 +51,8 @@ const Loading = () => {
             <h2 className="sr-only">Recipes</h2>
 
             <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
-              {"abcdefgasdfc".split("").map((i) => (
-                <div key={i} className="group">
+              {"abcdefgasdfc".split("").map((char, index) => (
+                <div key={`${char}-${index}`} className="group">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                     {/* padding bottom to Approximate aspect ratio of 1.35 since all images are 1086 x 1465 */}
                     <Skeleton className="w-full pb-[135%] rounded-xl" />
@@ -69,6 +68,7 @@ const Loading = () => {
                 </div>
               ))}
             </div>
+
             {/* make it a skeleton  */}
             <div className="text-center">
               <Pagination>
