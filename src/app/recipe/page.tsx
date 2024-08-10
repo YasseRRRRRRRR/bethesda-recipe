@@ -34,6 +34,10 @@ const getRecipes = async (
       }`,
       offset,
     });
+
+  // to test loading.tsx
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
   return { items: resultList.items, totalItems: resultList.totalItems };
 };
 
