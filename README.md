@@ -1,9 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Description 
+This is a recipe website bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), that displays recipe's from the book [The Elder Scrolls: The Official Cookbook](https://www.amazon.com/Elder-Scrolls-Official-Cookbook/dp/1683833988), the front end was made using [Next.js](https://nextjs.org/) and pocketbase for the backend
+the full tech stack is:
+
+Front-End:
+- [Shadcn.ui](https://ui.shadcn.com).
+- [Tailwind](https://tailwindcss.com).
+  
+![image](https://github.com/user-attachments/assets/3dbb8b6f-b532-494e-9a96-f8e75e181a90)
+![image](https://github.com/user-attachments/assets/33688052-3906-4c5f-90a1-f69eaf0245b2)
+![image](https://github.com/user-attachments/assets/6030eacf-85dd-48dd-b0dc-3c1e11ede271)
+
+Back-End:
+- [PocketBase](https://pocketbase.io)
+
+![image](https://github.com/user-attachments/assets/3d5c1aa9-676f-452c-a9da-1b74378708f7)
+![image](https://github.com/user-attachments/assets/825d7fdd-0aaa-4ffe-8154-824386f6c709)
+
 
 ## Getting Started
 
-First, run the development server:
-
+First, clone the repo and install the dependencies using 
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+Then run the command
 ```bash
 npm run dev
 # or
@@ -16,21 +42,4 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://github.com/user-attachments/assets/7adae2ca-64ea-41fd-9f13-5137434d098d)
