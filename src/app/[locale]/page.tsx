@@ -20,13 +20,13 @@ export default async function Home({
           <div className="col-span-1 p-6 lg:px-0 lg:pt-4">
             <div className="mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="block mb-4 text-xs md:text-sm text-violet-500 font-medium">
-                {t("HeroSection.headline")}
+                {t("HeroSection.headline_1")}
               </span>
               <h1 className=" w-fit tracking-tight text-balance mt-8 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
                 {t("HeroSection.header_1")}
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                {t("HeroSection.Description")}
+                {t("HeroSection.description_1")}
               </p>
               <div className="mt-8 ">
                 <Link
@@ -35,7 +35,7 @@ export default async function Home({
                     size: "lg",
                   })}
                 >
-                  {t("HeroSection.call_to_action")}
+                  {t("HeroSection.call_to_action_1")}
                   <ArrowRight className="size-4 ml-2" />
                 </Link>
               </div>

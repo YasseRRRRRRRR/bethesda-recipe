@@ -34,7 +34,7 @@ const NavBar = async ({ lang }: { lang: string }) => {
             <TranslationDropDown lang={lang} />
             <div className=" hidden md:flex h-full justify-around gap-2 items-center flex-end space-x-4">
               <Link
-                href={`${lang}/inspiration`}
+                href={`/${lang}/inspiration`}
                 className={buttonVariants({
                   size: "lg",
                   variant: "secondary",
@@ -43,7 +43,7 @@ const NavBar = async ({ lang }: { lang: string }) => {
                 {t("btn_1_inspo")}
               </Link>
               <Link
-                href={`${lang}/recipe`}
+                href={`/${lang}/recipe`}
                 className={buttonVariants({
                   size: "lg",
                 })}
@@ -75,7 +75,7 @@ const NavBar = async ({ lang }: { lang: string }) => {
                     </SheetClose>
                     <SheetClose asChild>
                       <Link
-                        href={`${lang}/inspiration`}
+                        href={`/${lang}/inspiration`}
                         className={buttonVariants({
                           size: "lg",
                           variant: "link",
@@ -86,7 +86,7 @@ const NavBar = async ({ lang }: { lang: string }) => {
                     </SheetClose>
                     <SheetClose asChild>
                       <Link
-                        href={`${lang}/recipe`}
+                        href={`/${lang}/recipe`}
                         className={buttonVariants({
                           size: "lg",
                           variant: "link",

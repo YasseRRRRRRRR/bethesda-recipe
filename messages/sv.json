@@ -9,10 +9,10 @@
     "home": "Hem"
   },
   "HeroSection": {
-    "headline": "Upplev mat som aldrig förr",
+    "headline_1": "Upplev mat som aldrig förr",
     "header_1": "Ta med smakerna av Tamriel",
-    "Description": "Upplev de rika kulinariska traditionerna i Tamriel, med recept inspirerade av de olika landskapen och kulturerna i Skyrim, Morrowind och vidare. ",
-    "call_to_action": "Börja laga mat"
+    "description_1": "Upplev de rika kulinariska traditionerna i Tamriel, med recept inspirerade av de olika landskapen och kulturerna i Skyrim, Morrowind och vidare. ",
+    "call_to_action_1": "Börja laga mat"
   },
   "ExamplesSection": {
     "headline_2": "Upptäck läckra och lärovänliga recept och anpassade med lokala ingredienser",

@@ -4,8 +4,9 @@ import MaxWidthWrapper from "./maxWidthWrapper";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
-const Footer = async () => {
+const Footer = async ({ lang }: { lang: string }) => {
   const t = await getTranslations("Footer");
+
   return (
     <footer className="bg-white h-20 relative">
       <MaxWidthWrapper>
@@ -20,19 +21,19 @@ const Footer = async () => {
           <div className="flex items-center justify-center">
             <div className="flex space-x-8">
               <Link
-                href="/policies/terms-of-service"
+                href={`/${lang}/policies/terms-of-service`}
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 {t("terms")}
               </Link>
               <Link
-                href="/policies/privacy-policy"
+                href={`/${lang}/policies/privacy-policy`}
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 {t("privacy")}
               </Link>
               <Link
-                href="/recipe/isycr5h0s0mqvw0"
+                href={`/${lang}/recipe/isycr5h0s0mqvw0`}
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
                 {t("cookie")}

@@ -9,10 +9,10 @@
     "home": "Koti"
   },
   "HeroSection": {
-    "headline": "Koe ruoka kuin koskaan ennen",
+    "headline_1": "Koe ruoka kuin koskaan ennen",
     "header_1": "Tuomassa Tamrielin makuja",
-    "Description": "Koe Tamrielin rikkaat kulinaariset perinteet Skyrimin, Morrowindin ja muiden maisemien ja kulttuurien inspiroimien reseptien avulla. ",
-    "call_to_action": "Aloita ruoanlaitto"
+    "description_1": "Koe Tamrielin rikkaat kulinaariset perinteet Skyrimin, Morrowindin ja muiden maisemien ja kulttuurien inspiroimien reseptien avulla. ",
+    "call_to_action_1": "Aloita ruoanlaitto"
   },
 
   "ExamplesSection": {
