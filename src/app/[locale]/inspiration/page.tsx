@@ -4,8 +4,10 @@ import { ArrowRight, Plus, TvMinimalPlay, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getTranslations } from "next-intl/server";
 
-const Page = () => {
+const Page = async () => {
+  const t = await getTranslations("InspirationPage");
   return (
     <MaxWidthWrapper>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -22,11 +24,11 @@ const Page = () => {
 
           <div className="lg:py-24">
             <h2 className="text-3xl font-bold sm:text-4xl text-violet-600">
-              Project Inspiration & Acknowledgements
+              {t("header_4")}
             </h2>
 
             <p className="mt-4 mb-6 text-gray-600">
-              this website was first inspired by the amazing channel{" "}
+              {t("paragraph_1")}{" "}
               <Link
                 href="https://www.youtube.com/@fantasykitchen6841"
                 className={buttonVariants({
@@ -35,9 +37,7 @@ const Page = () => {
               >
                 Fantasy Kitchen
               </Link>
-              whose videos you&apos;ll see link in most if not all recipes in
-              this site as well as the wonderfull channel, including but not
-              limited to:
+              {t("paragraph_2")}
               <ul role="list" className="my-8 space-y-2 text-gray-600">
                 <li>
                   <Link
@@ -94,23 +94,19 @@ const Page = () => {
                   </Link>
                 </li>
               </ul>
-              and finally and most importantly the talented and amazing cook
-              Chelsea Monroe-Cassel author of the book; The Elder Scrolls: The
-              Official Cookbook. <br />
-              In essance I wanted this I wanted this site to almost be a love
-              letter to these talented creators as well as the Elder Scrolls
-              world where I was Engrossed in for quite sometime now, and look
-              back on fondly, like a retro game or childhood memory.
+              {t("paragraph_3")}
+              <br />
+              {t("paragraph_4")}
             </p>
             <Link
               target="_blank"
               href="https://foodthroughthepages.com"
               className={buttonVariants({
                 size: "lg",
-                // variant: "secondary",
               })}
             >
-              Check Out The Author&apos;s Website
+              {t("call_to_action_4")}
+
               <ArrowRight className="size-4 ml-2" />
             </Link>
           </div>

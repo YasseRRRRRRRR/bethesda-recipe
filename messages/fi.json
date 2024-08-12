@@ -1,5 +1,71 @@
 {
-    "HomePage": {
-      "title": "Moi Maailma!"
-    }
+  "NavBar": {
+    "btn_1_inspo": "Inspiraatiota",
+    "btn_2_recipe": "Reseptit",
+    "logo": {
+      "fantazy": "Fantasia",
+      "recipe": "resepti"
+    },
+    "home": "Koti"
+  },
+  "HeroSection": {
+    "headline": "Koe ruoka kuin koskaan ennen",
+    "header_1": "Tuomassa Tamrielin makuja",
+    "Description": "Koe Tamrielin rikkaat kulinaariset perinteet Skyrimin, Morrowindin ja muiden maisemien ja kulttuurien inspiroimien reseptien avulla. ",
+    "call_to_action": "Aloita ruoanlaitto"
+  },
+
+  "ExamplesSection": {
+    "headline_2": "Löydä herkullisia ja perinteisiä reseptejä, jotka on mukautettu paikallisista ainesosista",
+    "examples_section_content": {
+      "sub_headers_1": {
+        "sub_headers_example_1": "Perusasiat",
+        "sub_headers_example_2": "Pääkurssit",
+        "sub_headers_example_3": "Jälkiruoat"
+      },
+      "header_2": {
+        "header_example_1": "Nord Spice",
+        "header_example_2": "Juhlat",
+        "header_example_3": "Sweetrollit"
+      },
+      "description_2": {
+        "description_example_1": "Basic- ja välttämättömistä maustesekoituksista.",
+        "description_example_2": "Uskomattomiin täyden ruokalajin aterioihin",
+        "description_example_3": "aina ikonisiin ja herkullisiin makeisiin."
+      }
+    },
+    "call_to_action_2": "Lisätietoja"
+  },
+  "BookSection": {
+    "header_3": "Vieläkö nälkä?",
+    "sub_header_2": "Löydät kaikki nämä reseptit ja paljon muuta Chelsea Monroe-Casselin fantastisesta kirjasta The Elder Scrolls: The Official Cookbook. ",
+    "call_to_action_3": "Hanki kopio"
+  },
+  "InspirationPage": {
+    "header_4": "Projektin inspiraatiota ja kiitosta",
+    "paragraph_1": "tämä sivusto sai ensimmäisenä inspiraationsa upeasta kanavasta",
+    "paragraph_2": "jonka videoihin näet linkin useimmissa, ellei kaikissa tämän sivuston resepteissä sekä upeassa kanavassa, mukaan lukien, mutta niihin rajoittumatta:",
+    "paragraph_3": "ja lopuksi ja mikä tärkeintä lahjakas ja hämmästyttävä kokki Chelsea Monroe-Cassel kirjan kirjoittaja; ",
+    "paragraph_4": "Pohjimmiltaan halusin tämän Halusin tämän sivuston olevan melkein rakkauskirje näille lahjakkaille tekijöille sekä Elder Scrolls -maailmalle, johon olin syventynyt jo jonkin aikaa, ja muistelemaan sitä hellästi, kuten retropeliä tai lapsuuden muistoa.",
+    "call_to_action_4": "Tutustu kirjoittajan verkkosivustoon"
+  },
+  "RecipePage": {
+    "add_suggestion": "Lisää ehdotus",
+    "add_filter": "Lisää suodatin",
+    "search": "Etsi Resepti",
+    "difficulty": "vaikeus"
+  },
+
+  "RecipeInstructionPage": {
+    "breadCrumbs": { "home_page": "Koti", "recipe_page": "Reseptit" },
+    "ingredients": "Ainesosat",
+    "instructions": "Ohjeet",
+    "call_to_action_5": "Katso opetusvideo"
+  },
+  "Footer": {
+    "copy_right": "Kaikki oikeudet pidätetään",
+    "terms": "Ehdot",
+    "privacy": "Tietosuojakäytäntö",
+    "cookie": "Evästekäytäntö"
   }
+}

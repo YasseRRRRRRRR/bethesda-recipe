@@ -4,7 +4,7 @@ import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 // maybe there's a more elegant way than just taking it from the url since we do that in the layout anyway but idk
 export default async function Home({
@@ -12,6 +12,7 @@ export default async function Home({
 }: {
   params: { locale: string };
 }) {
+  const t = await getTranslations();
   return (
     <div className="bg-slate-50">
       <section>
@@ -19,16 +20,13 @@ export default async function Home({
           <div className="col-span-1 p-6 lg:px-0 lg:pt-4">
             <div className="mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="block mb-4 text-xs md:text-sm text-violet-500 font-medium">
-                Experience food like never before
+                {t("HeroSection.headline")}
               </span>
               <h1 className=" w-fit tracking-tight text-balance mt-8 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
-                Bringing the Flavors of Tamriel
+                {t("HeroSection.header_1")}
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                Experience the rich culinary traditions of Tamriel, with recipes
-                inspired by the diverse landscapes and cultures of Skyrim,
-                Morrowind, and beyond. From hearty stews to decadent desserts,
-                our collection offers a taste of adventure for your taste buds.
+                {t("HeroSection.Description")}
               </p>
               <div className="mt-8 ">
                 <Link
@@ -37,7 +35,7 @@ export default async function Home({
                     size: "lg",
                   })}
                 >
-                  Start Cooking
+                  {t("HeroSection.call_to_action")}
                   <ArrowRight className="size-4 ml-2" />
                 </Link>
               </div>
@@ -46,13 +44,13 @@ export default async function Home({
           <ShuffleGrid />
         </MaxWidthWrapper>
       </section>
+
       <section className="bg-violet-100 py-12">
         <div className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="container px-5 py-12 mx-auto">
             <div className="flex flex-wrap -m-4">
               <h2 className="px-4 py-10 tracking-tight lg:text-center text-balance leading-tight font-semibold text-3xl md:text-5xl text-violet-900">
-                Discover Delicious And Lore-Friendly Recipes and Adapted with
-                Local Ingredients
+                {t("ExamplesSection.headline_2")}
               </h2>
               <div className="p-4 md:w-1/3">
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -65,20 +63,27 @@ export default async function Home({
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      Basics
+                      {t(
+                        "ExamplesSection.examples_section_content.sub_headers_1.sub_headers_example_1"
+                      )}
                     </h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Nord Spice
+                      {t(
+                        "ExamplesSection.examples_section_content.header_2.header_example_1"
+                      )}
                     </h1>
                     <p className="leading-relaxed mb-3">
-                      From Basic, and essential spice blends.
+                      {t(
+                        "ExamplesSection.examples_section_content.description_2.description_example_1"
+                      )}
                     </p>
                     <div className="flex items-center flex-wrap ">
                       <Link
                         href={`${locale}/recipe/r92gce9sqgb0wjl`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        {t("ExamplesSection.call_to_action_2")}
+
                         <ArrowRight className="size-4 ml-2" />
                       </Link>
                     </div>
@@ -96,20 +101,26 @@ export default async function Home({
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      Main Courses
+                      {t(
+                        "ExamplesSection.examples_section_content.sub_headers_1.sub_headers_example_2"
+                      )}
                     </h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Feasts
+                      {t(
+                        "ExamplesSection.examples_section_content.header_2.header_example_2"
+                      )}
                     </h1>
                     <p className="leading-relaxed mb-3">
-                      To Incredible full course meals
+                      {t(
+                        "ExamplesSection.examples_section_content.description_2.description_example_2"
+                      )}
                     </p>
                     <div className="flex items-center flex-wrap ">
                       <Link
                         href={`${locale}/recipe?category=main_course`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        {t("ExamplesSection.call_to_action_2")}
                         <ArrowRight className="size-4 ml-2" />
                       </Link>
                     </div>
@@ -127,20 +138,26 @@ export default async function Home({
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      Desserts
+                      {t(
+                        "ExamplesSection.examples_section_content.sub_headers_1.sub_headers_example_3"
+                      )}
                     </h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Sweetrolls
+                      {t(
+                        "ExamplesSection.examples_section_content.header_2.header_example_3"
+                      )}
                     </h1>
                     <p className="leading-relaxed mb-3">
-                      all the way to iconic and delicious sweets.
+                      {t(
+                        "ExamplesSection.examples_section_content.description_2.description_example_3"
+                      )}
                     </p>
                     <div className="flex items-center flex-wrap">
                       <Link
                         href={`${locale}/recipe/lkfcrxn2zur8ivn`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
-                        Learn More
+                        {t("ExamplesSection.call_to_action_2")}
                         <ArrowRight className="size-4 ml-2" />
                       </Link>
                     </div>
@@ -151,6 +168,7 @@ export default async function Home({
           </div>
         </div>
       </section>
+
       <section>
         <MaxWidthWrapper>
           <div className=" mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
@@ -172,13 +190,11 @@ export default async function Home({
 
                 <div className="p-8 sm:p-16 lg:p-24">
                   <h2 className="text-4xl font-bold sm:text-3xl">
-                    Still Hungry?
+                    {t("BookSection.header_3")}
                   </h2>
 
                   <p className="mt-4 text-gray-600">
-                    You can find all these recipes and more in the fantastic
-                    book The Elder Scrolls: The Official Cookbook by Chelsea
-                    Monroe-Cassel. So be sure to grab yourself a copy
+                    {t("BookSection.sub_header_2")}
                   </p>
                   <Link
                     target="_blank"
@@ -188,7 +204,7 @@ export default async function Home({
                       className: "mt-8",
                     })}
                   >
-                    Get A Copy
+                    {t("BookSection.call_to_action_3")}{" "}
                   </Link>
                 </div>
               </div>

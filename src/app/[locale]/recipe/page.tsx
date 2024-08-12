@@ -9,12 +9,13 @@ import FilterationSystem from "./component/filter";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
+  PaginationEllipsis, //find where to put this!!!!
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { getTranslations } from "next-intl/server";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -46,11 +47,18 @@ const RecipesPage = async ({
 }: {
   searchParams?: { query?: string; category?: string; page?: string };
 }) => {
+  // search params
   const query = searchParams?.query || "";
   const category = searchParams?.category || "";
+
+  // pagination
   const page = parseInt(searchParams?.page || "1", 10);
   const itemsPerPage = 12;
 
+  // translation
+  const t = await getTranslations("RecipePage");
+
+  // recipe records
   const { items: recipes, totalItems } = await getRecipes(
     query,
     category,
@@ -73,17 +81,24 @@ const RecipesPage = async ({
                   size: "lg",
                 })}
               >
-                Add Suggestion
+                {t("add_suggestion")}
                 <Plus className="size-4 ml-2" />
               </Link>
 
-              <FilterationSystem />
+              <FilterationSystem
+                addFilter={t("add_filter")}
+                search={t("search")}
+              />
             </div>
             <h2 className="sr-only">Recipes</h2>
 
             <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
               {recipes.map((recipe) => (
-                <Recipe key={recipe.id} recipe={recipe} />
+                <Recipe
+                  key={recipe.id}
+                  recipe={recipe}
+                  Diff={t("difficulty")}
+                />
               ))}
             </div>
             <div className="text-center mt-14">
@@ -119,7 +134,7 @@ const RecipesPage = async ({
   );
 };
 
-const Recipe = ({ recipe }: any) => {
+const Recipe = ({ recipe, Diff }: any) => {
   const { id, title, thumbnail, difficulty, type } = recipe || {};
 
   return (
@@ -137,7 +152,7 @@ const Recipe = ({ recipe }: any) => {
         {title}
       </h3>
       <p className="mt-1 text-base font-medium text-gray-900">
-        difficulty : {difficulty}/10
+        {Diff} : {difficulty}/10
       </p>
     </Link>
   );

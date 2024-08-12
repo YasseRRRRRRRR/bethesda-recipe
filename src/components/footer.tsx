@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import MaxWidthWrapper from "./maxWidthWrapper";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-const Footer = () => {
+const Footer = async () => {
+  const t = await getTranslations("Footer");
   return (
     <footer className="bg-white h-20 relative">
       <MaxWidthWrapper>
@@ -12,7 +14,7 @@ const Footer = () => {
           <div className="text-center md:text-left pb-2 md:pb-0">
             <p className="text-sm text-muted-foreground ">
               &copy;
-              {new Date().getFullYear()} All rights unreserved
+              {new Date().getFullYear()} {t("copy_right")}
             </p>
           </div>
           <div className="flex items-center justify-center">
@@ -21,19 +23,19 @@ const Footer = () => {
                 href="/policies/terms-of-service"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
-                Terms
+                {t("terms")}
               </Link>
               <Link
                 href="/policies/privacy-policy"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
-                Privacy Policy
+                {t("privacy")}
               </Link>
               <Link
                 href="/recipe/isycr5h0s0mqvw0"
                 className="text-sm text-muted-foreground  hover:text-gray-600"
               >
-                Cookie Policy
+                {t("cookie")}
               </Link>
             </div>
           </div>

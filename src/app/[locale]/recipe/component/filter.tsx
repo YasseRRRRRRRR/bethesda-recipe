@@ -25,7 +25,7 @@ const filterParams = [
   { name: "Desserts", value: "desserts" },
   { name: "Drinks", value: "drinks" },
 ];
-const FilterationSystem = (isLoading: any) => {
+const FilterationSystem = ({ addFilter, search }: any) => {
   const [isFiltered, setIsFilter] = useState(false);
 
   const [filter, setFilter] = useState("all");
@@ -86,7 +86,7 @@ const FilterationSystem = (isLoading: any) => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">
-            Add Filter <ChevronDown className="size-4 ml-2" />
+            {addFilter} <ChevronDown className="size-4 ml-2" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
@@ -110,7 +110,7 @@ const FilterationSystem = (isLoading: any) => {
         <Search className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-500 left-3" />
         <Input
           type="text"
-          placeholder="Search For A Recipe..."
+          placeholder={search}
           className="pl-12 pr-4"
           onChange={(e) => handleSearch(e.target.value)}
           defaultValue={searchParams.get("query")?.toString()}

@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, House } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -27,7 +28,9 @@ const getSingleRecipe = async (recipeId: string) => {
 };
 
 const RecipePage = async ({ params }: any) => {
+  // getting recipe by id
   const recipe = await getSingleRecipe(params.id);
+
   const {
     title,
     link_to_video,
@@ -41,13 +44,16 @@ const RecipePage = async ({ params }: any) => {
     type,
   } = recipe || {};
 
+  // translations
+  const t = await getTranslations("RecipeInstructionPage");
+
   return (
     <MaxWidthWrapper className="mt-40 mb-20">
       <nav aria-label="Breadcrumb" className="pb-2 ">
         <ol className="flex  items-center gap-1 text-sm text-gray-600">
           <li>
             <Link href="/" className="block transition hover:text-gray-700">
-              <span className="sr-only"> Home </span>
+              <span className="sr-only"> {t("breadCrumbs.home_page")} </span>
               <House className="h-4 w-4" />
             </Link>
           </li>
@@ -61,7 +67,7 @@ const RecipePage = async ({ params }: any) => {
               className="block transition hover:text-gray-700"
             >
               {" "}
-              Recipes{" "}
+              {t("breadCrumbs.recipe_page")}{" "}
             </Link>
           </li>
 
@@ -93,8 +99,10 @@ const RecipePage = async ({ params }: any) => {
         <div className=" max-w-auto w-auto max-w-[32rem] flex flex-col justify-self-center ">
           <Tabs defaultValue="Ingredients">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="Ingredients">Ingredients</TabsTrigger>
-              <TabsTrigger value="Instructions">Instructions</TabsTrigger>
+              <TabsTrigger value="Ingredients">{t("ingredients")}</TabsTrigger>
+              <TabsTrigger value="Instructions">
+                {t("instructions")}
+              </TabsTrigger>
             </TabsList>
             <h3
               className="my-8"
@@ -103,7 +111,9 @@ const RecipePage = async ({ params }: any) => {
             <TabsContent value="Ingredients">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-violet-600">Ingredients</CardTitle>
+                  <CardTitle className="text-violet-600">
+                    {t("ingredients")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent
                   className="space-y-2"
@@ -115,7 +125,7 @@ const RecipePage = async ({ params }: any) => {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-violet-600">
-                    Instructions
+                    {t("instructions")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent
@@ -130,7 +140,7 @@ const RecipePage = async ({ params }: any) => {
                         size: "lg",
                       })}
                     >
-                      Watch instructional video
+                      {t("call_to_action_5")}
                       <ArrowRight className="size-4 ml-2" />
                     </Link>
                   </CardFooter>

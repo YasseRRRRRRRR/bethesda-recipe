@@ -1,5 +1,70 @@
 {
-    "HomePage": {
-      "title": "sweedish words"
-    }
+  "NavBar": {
+    "btn_1_inspo": "Inspiration",
+    "btn_2_recipe": "Recept",
+    "logo": {
+      "fantazy": "Fantazy",
+      "recipe": "recept"
+    },
+    "home": "Hem"
+  },
+  "HeroSection": {
+    "headline": "Upplev mat som aldrig förr",
+    "header_1": "Ta med smakerna av Tamriel",
+    "Description": "Upplev de rika kulinariska traditionerna i Tamriel, med recept inspirerade av de olika landskapen och kulturerna i Skyrim, Morrowind och vidare. ",
+    "call_to_action": "Börja laga mat"
+  },
+  "ExamplesSection": {
+    "headline_2": "Upptäck läckra och lärovänliga recept och anpassade med lokala ingredienser",
+    "examples_section_content": {
+      "sub_headers_1": {
+        "sub_headers_example_1": "Grunderna",
+        "sub_headers_example_2": "Huvudrätter",
+        "sub_headers_example_3": "Desserter"
+      },
+      "header_2": {
+        "header_example_1": "Nord Spice",
+        "header_example_2": "Fester",
+        "header_example_3": "Sweetrolls"
+      },
+      "description_2": {
+        "description_example_1": "Från Basic och essentiella kryddblandningar.",
+        "description_example_2": "Till otroliga helrätters måltider",
+        "description_example_3": "hela vägen till ikoniska och läckra sötsaker."
+      }
+    },
+    "call_to_action_2": "Läs mer"
+  },
+  "BookSection": {
+    "header_3": "Fortfarande hungrig?",
+    "sub_header_2": "Du hittar alla dessa recept och mer i den fantastiska boken The Elder Scrolls: The Official Cookbook av Chelsea Monroe-Cassel. ",
+    "call_to_action_3": "Skaffa en kopia"
+  },
+
+  "InspirationPage": {
+    "header_4": "Projektinspiration & erkännanden",
+    "paragraph_1": "denna webbplats inspirerades först av den fantastiska kanalen",
+    "paragraph_2": "vars videor du kommer att se länkar i de flesta om inte alla recept på den här webbplatsen samt den underbara kanalen, inklusive men inte begränsat till:",
+    "paragraph_3": "och slutligen och viktigast av allt den begåvade och fantastiska kocken Chelsea Monroe-Cassel författare till boken; ",
+    "paragraph_4": "I grund och botten ville jag ha det här. Jag ville att den här webbplatsen nästan skulle vara ett kärleksbrev till dessa begåvade skapare såväl som till Elder Scrolls-världen där jag var uppslukad av ett tag nu, och ser tillbaka på med glädje, som ett retrospel eller ett barndomsminne.",
+    "call_to_action_4": "Kolla in författarens hemsida"
+  },
+  "RecipePage": {
+    "add_suggestion": "Lägg till förslag",
+    "add_filter": "Lägg till filter",
+    "search": "Sök efter ett recept",
+    "difficulty": "svårighet"
+  },
+  "RecipeInstructionPage": {
+    "breadCrumbs": { "home_page": "Hem", "recipe_page": "Recept" },
+    "ingredients": "Ingredienser",
+    "instructions": "Instruktioner",
+    "call_to_action_5": "Se instruktionsvideo"
+  },
+  "Footer": {
+    "copy_right": "Alla rättigheter förbehålls",
+    "terms": "Villkor",
+    "privacy": "Sekretesspolicy",
+    "cookie": "Cookiepolicy"
   }
+}
