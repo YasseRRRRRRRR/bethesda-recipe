@@ -4,8 +4,14 @@ import ShuffleGrid from "@/components/shuffleGrid";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-export default async function Home() {
+// maybe there's a more elegant way than just taking it from the url since we do that in the layout anyway but idk
+export default async function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
   return (
     <div className="bg-slate-50">
       <section>
@@ -26,7 +32,7 @@ export default async function Home() {
               </p>
               <div className="mt-8 ">
                 <Link
-                  href="/recipe"
+                  href={`${locale}/recipe`}
                   className={buttonVariants({
                     size: "lg",
                   })}
@@ -69,7 +75,7 @@ export default async function Home() {
                     </p>
                     <div className="flex items-center flex-wrap ">
                       <Link
-                        href="/recipe/r92gce9sqgb0wjl"
+                        href={`${locale}/recipe/r92gce9sqgb0wjl`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         Learn More
@@ -84,7 +90,7 @@ export default async function Home() {
                   <Image
                     width={700}
                     height={400}
-                    src="/main_courses.jpg"
+                    src="/feast.jpeg"
                     alt="blog"
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                   />
@@ -100,7 +106,7 @@ export default async function Home() {
                     </p>
                     <div className="flex items-center flex-wrap ">
                       <Link
-                        href="/recipe?category=main_course"
+                        href={`${locale}/recipe?category=main_course`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         Learn More
@@ -131,7 +137,7 @@ export default async function Home() {
                     </p>
                     <div className="flex items-center flex-wrap">
                       <Link
-                        href="/recipe/lkfcrxn2zur8ivn"
+                        href={`${locale}/recipe/lkfcrxn2zur8ivn`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         Learn More
@@ -151,11 +157,12 @@ export default async function Home() {
             <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
               <div className="relative z-10 lg:py-16">
                 <div className="relative h-64 sm:h-80 lg:h-full">
-                  {/* MaKe this using next js Image comp */}
-                  <img
+                  <Image
                     alt="The Official Elder Scrolls cookbook"
                     src="/ES_book_cover.jpg"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    height={1000}
+                    width={500}
+                    className="absolute inset-0 h-full w-full object-cover rounded-t-2xl lg:rounded-none"
                   />
                 </div>
               </div>
@@ -174,6 +181,7 @@ export default async function Home() {
                     Monroe-Cassel. So be sure to grab yourself a copy
                   </p>
                   <Link
+                    target="_blank"
                     href="https://www.amazon.com/Elder-Scrolls-Official-Cookbook/dp/B097FCHJG9"
                     className={buttonVariants({
                       size: "lg",

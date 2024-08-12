@@ -2,9 +2,7 @@
 import React from "react";
 import MaxWidthWrapper from "./maxWidthWrapper";
 import Link from "next/link";
-// import { Link } from "../navigation";
 
-import TranslationDropDown from "./translationDropDwon";
 import {
   Sheet,
   SheetClose,
@@ -41,10 +39,12 @@ const NavBar = ({ lang }: { lang: string }) => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
+            {/* replace with logo */}
             <p>
               <span className="text-violet-600">Fantazy</span> Recipe
             </p>
           </Link>
+
           <div className="h-full  flex justify-around items-center space-x-4">
             {/* translation menu */}
             <DropdownMenu>
@@ -64,7 +64,7 @@ const NavBar = ({ lang }: { lang: string }) => {
                   <DropdownMenuRadioItem value="sv">
                     swedish
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="EN">
+                  <DropdownMenuRadioItem value="en">
                     english
                   </DropdownMenuRadioItem>
                 </DropdownMenuRadioGroup>
@@ -82,7 +82,6 @@ const NavBar = ({ lang }: { lang: string }) => {
               </Link>
               <Link
                 href={`${lang}/recipe`}
-                // href="/recipe"
                 className={buttonVariants({
                   size: "lg",
                 })}
@@ -90,8 +89,9 @@ const NavBar = ({ lang }: { lang: string }) => {
                 Recipes
               </Link>
             </div>
+
+            {/* needs to make a better hamburg menu */}
             <div className="block md:hidden">
-              {/* needs to make a better hamburg menu */}
               <Sheet>
                 <SheetTrigger asChild>
                   <Button size="icon">
@@ -100,27 +100,39 @@ const NavBar = ({ lang }: { lang: string }) => {
                 </SheetTrigger>
                 <SheetContent className="z-[101]">
                   <div className="my-8 flex flex-col gap-2 items-start justify-start ">
-                    <Link
-                      href="/inspiration"
-                      className={buttonVariants({
-                        size: "lg",
-                        variant: "link",
-                      })}
-                    >
-                      Inspiration
-                    </Link>
-                    <Link
-                      href="/recipe"
-                      className={buttonVariants({
-                        size: "lg",
-                        variant: "link",
-                      })}
-                    >
-                      Recipes
-                    </Link>
-                    {/* <div className="mx-[30px]">
-                      <TranslationDropDown />
-                    </div> */}
+                    <SheetClose asChild>
+                      <Link
+                        href="/"
+                        className={buttonVariants({
+                          size: "lg",
+                          variant: "link",
+                        })}
+                      >
+                        Home
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link
+                        href={`${lang}/inspiration`}
+                        className={buttonVariants({
+                          size: "lg",
+                          variant: "link",
+                        })}
+                      >
+                        Inspiration
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link
+                        href={`${lang}/recipe`}
+                        className={buttonVariants({
+                          size: "lg",
+                          variant: "link",
+                        })}
+                      >
+                        Recipes
+                      </Link>
+                    </SheetClose>
                   </div>
                 </SheetContent>
               </Sheet>
