@@ -123,7 +123,7 @@ const Recipe = ({ recipe }: any) => {
   const { id, title, thumbnail, difficulty, type } = recipe || {};
 
   return (
-    <Link href={`/recipe/${id}`} className="group">
+    <Link href={`./recipe/${id}`} className="group">
       <div className="  aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
         <Image
           src={pb.files.getUrl(recipe, thumbnail)}
