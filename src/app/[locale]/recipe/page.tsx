@@ -77,15 +77,6 @@ const RecipesPage = async ({
             <div className="py-6 flex justify-between flex-col lg:flex-row gap-6">
               {/* make the form for suggestions*/}
               <SuggestionModal suggestion={t("add_suggestion")} />
-              {/* <Link
-                href=""
-                className={buttonVariants({
-                  size: "lg",
-                })}
-              >
-                {t("add_suggestion")}
-                <Plus className="size-4 ml-2" />
-              </Link> */}
 
               <FilterationSystem
                 addFilter={t("add_filter")}

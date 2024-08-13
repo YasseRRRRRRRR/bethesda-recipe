@@ -21,7 +21,6 @@ export default function Error() {
             className={buttonVariants({
               size: "lg",
             })}
-            // className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
           >
             Go back home
           </Link>
@@ -31,7 +30,6 @@ export default function Error() {
               size: "lg",
               variant: "secondary",
             })}
-            // className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
           >
             Contact support <ArrowRight className="size-4 ml-2" />
           </Link>
