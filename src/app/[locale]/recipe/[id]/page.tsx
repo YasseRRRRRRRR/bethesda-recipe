@@ -27,9 +27,13 @@ const getSingleRecipe = async (recipeId: string) => {
   return record;
 };
 
-const RecipePage = async ({ params }: any) => {
+const RecipePage = async ({
+  params: { locale, id },
+}: {
+  params: { locale: string; id: string };
+}) => {
   // getting recipe by id
-  const recipe = await getSingleRecipe(params.id);
+  const recipe = await getSingleRecipe(id);
 
   const {
     title,
@@ -52,7 +56,10 @@ const RecipePage = async ({ params }: any) => {
       <nav aria-label="Breadcrumb" className="pb-2 ">
         <ol className="flex  items-center gap-1 text-sm text-gray-600">
           <li>
-            <Link href="/" className="block transition hover:text-gray-700">
+            <Link
+              href={`/${locale}`}
+              className="block transition hover:text-gray-700"
+            >
               <span className="sr-only"> {t("breadCrumbs.home_page")} </span>
               <House className="h-4 w-4" />
             </Link>
@@ -63,7 +70,7 @@ const RecipePage = async ({ params }: any) => {
 
           <li>
             <Link
-              href="/recipe"
+              href={`/${locale}/recipe`}
               className="block transition hover:text-gray-700"
             >
               {" "}
@@ -76,7 +83,7 @@ const RecipePage = async ({ params }: any) => {
           </li>
 
           <li>
-            <Link href="" className="block transition hover:text-gray-700">
+            <Link href="#" className="block transition hover:text-gray-700">
               {" "}
               {title}{" "}
             </Link>

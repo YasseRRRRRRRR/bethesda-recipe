@@ -49,6 +49,22 @@
     "paragraph_4": "Pohjimmiltaan halusin tämän Halusin tämän sivuston olevan melkein rakkauskirje näille lahjakkaille tekijöille sekä Elder Scrolls -maailmalle, johon olin syventynyt jo jonkin aikaa, ja muistelemaan sitä hellästi, kuten retropeliä tai lapsuuden muistoa.",
     "call_to_action_4": "Tutustu kirjoittajan verkkosivustoon"
   },
+  "TermsPage": {
+    "header_5": "Kulinaarinen Codex Covenant",
+    "article_1_subheader": "Artikkeli I: Gastronominen Grimoire Access",
+    "article_1": "Käyttämällä tätä verkkosivustoa sitoudut noudattamaan tässä esitettyjä ehtoja. Tämä sivusto tarjoaa pääsyn The Elder Scrolls: The Official Cookbook', jonka on kirjoittanut Chelsea Monroe-Cassel. Kaikki sisältö on tarkoitettu vain henkilökohtaiseen, ei-kaupalliseen käyttöön. Reseptien tai niihin liittyvien materiaalien luvaton kopiointi, jakelu tai hyödyntäminen on kielletty. Kaikkien sisällön muutosten tai mukautusten on oltava sivuston ylläpitäjän kirjallisesti hyväksymiä.",
+    "article_2_subheader": "Artikkeli II: Digitaalisen ruokailualueen käyttö",
+    "article_2": "Tämän verkkosivuston käyttö ja käyttö edellyttää tässä kuvattujen käyttöehtojen noudattamista. Sitoudut käyttämään verkkosivustoa vain laillisiin tarkoituksiin ja tavalla, joka ei loukkaa muiden oikeuksia. Kaikki yritykset häiritä sivuston toimintaa tai hankkia luvaton pääsy käyttäjätileihin tai tietoihin ovat ehdottomasti kiellettyjä. Pidätämme oikeuden keskeyttää tai lopettaa verkkosivuston käyttöoikeuden käyttäjiltä, jotka rikkovat näitä ehtoja.",
+    "article_3_subheader": "III artikla: Ainesosien eheys",
+    "article_3": "Tällä verkkosivustolla esitetyt reseptit ovat saaneet inspiraationsa The Elder Scrolls -sarjan fiktiivisestä sisällöstä, ja ne on tulkittava luoviksi mukautuksiksi. Vaikka pyrimme varmistamaan ainesosaluetteloiden ja ohjeiden tarkkuuden, kaikki reseptit tarjotaan sillä varauksella, että ainesosien saatavuus ja valmistusmenetelmät voivat vaihdella. Käyttäjiä kehotetaan käyttämään omaa harkintaansa ja arvostelukykyään näiden ruokien valmistuksessa ja nauttimisessa.",
+    "article_4_subheader": "IV artikla: Teknologinen muuntaminen",
+    "article_4": "Olemme sitoutuneet ylläpitämään verkkosivuston toimivuutta ja turvallisuutta. Emme kuitenkaan voi taata, että sivustolla ei ole aina teknisiä ongelmia tai häiriöitä. Käyttäjät ovat vastuussa siitä, että heidän oma tekniikkansa ja internet-yhteytensä ovat yhteensopivia sivuston kanssa. Emme vastaa mistään vahingoista, jotka johtuvat teknisistä vioista tai keskeytyksistä, jotka voivat vaikuttaa sivuston käyttökokemukseen.",
+    "article_5_subheader": "V artikla: Yhteisön sopimus",
+    "article_5": "Käyttäjiä kannustetaan edistämään myönteistä ja kunnioittavaa yhteisöympäristöä. Vuorovaikutuksessa muiden käyttäjien kanssa on noudatettava kohteliaisuutta ja kunnioitusta. Kaikenlaista häirintää, syrjintää tai sopimatonta käytöstä ei suvaita. Pidätämme oikeuden poistaa tai estää käyttäjiä, jotka osallistuvat haitalliseen toimintaan, ja ryhtyä toimiin yhteisön normien rikkomista vastaan.",
+    "article_6_subheader": "Artikkeli VI: Kielletyt juomat",
+    "article_6": "Tietyt toimet ovat ehdottomasti kiellettyjä tällä verkkosivustolla. Tällaisia ovat muun muassa sisällön luvaton käyttö tai jäljentäminen, haittaohjelmien tai haitallisten ohjelmistojen levittäminen ja vilpillinen toiminta. Käyttäjä, joka rikkoo näitä rajoituksia, joutuu välittömästi keskeyttämään tai lopettamaan pääsynsä. Pidätämme oikeuden käyttää oikeussuojakeinoja tällaisesta kielletystä toiminnasta aiheutuvien vahinkojen tai menetysten korvaamiseksi.",
+    "final_sub_header": "kaikki tämä ammattislang on luotu tekoälyllä, et uskonut, että istuisin täällä ja kirjoitan tämän kaiken puolestasi"
+  },
   "RecipePage": {
     "add_suggestion": "Lisää ehdotus",
     "add_filter": "Lisää suodatin",

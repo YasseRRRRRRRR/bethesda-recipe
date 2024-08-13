@@ -16,6 +16,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { getTranslations } from "next-intl/server";
+import SuggestionModal from "./component/suggestion";
 
 const pb = new PocketBase("http://127.0.0.1:8090");
 
@@ -75,7 +76,8 @@ const RecipesPage = async ({
           <div className="py-16 sm:py-24">
             <div className="py-6 flex justify-between flex-col lg:flex-row gap-6">
               {/* make the form for suggestions*/}
-              <Link
+              <SuggestionModal suggestion={t("add_suggestion")} />
+              {/* <Link
                 href=""
                 className={buttonVariants({
                   size: "lg",
@@ -83,7 +85,7 @@ const RecipesPage = async ({
               >
                 {t("add_suggestion")}
                 <Plus className="size-4 ml-2" />
-              </Link>
+              </Link> */}
 
               <FilterationSystem
                 addFilter={t("add_filter")}

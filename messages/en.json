@@ -48,6 +48,22 @@
     "paragraph_4": "In essence I wanted this I wanted this site to almost be a love letter to these talented creators as well as the Elder Scrolls world where I was Engrossed in for quite sometime now, and look back on fondly, like a retro game or childhood memory.",
     "call_to_action_4": "Check Out The Author's Website"
   },
+  "TermsPage": {
+    "header_5": "Culinary Codex Covenant",
+    "article_1_subheader": "Article I: Gastronomic Grimoire Access",
+    "article_1": "By using this website, you agree to be bound by the terms and conditions outlined herein. This site provides access to recipes inspired by 'The Elder Scrolls: The Official Cookbook' by Chelsea Monroe-Cassel. All content is for personal, non-commercial use only. Unauthorized duplication, distribution, or exploitation of the recipes or associated materials is prohibited. Any modifications or adaptations of the content must be approved in writing by the site administrator.",
+    "article_2_subheader": "Article II: Digital Dining Domain Usage",
+    "article_2": "Your access to and use of this website is subject to the terms of service detailed here. You agree to use the website only for lawful purposes and in a manner that does not infringe on the rights of others. Any attempts to interfere with the functioning of the site or gain unauthorized access to user accounts or data are strictly prohibited. We reserve the right to suspend or terminate access to the website for any user who violates these terms.",
+    "article_3_subheader": "Article III: Ingredient Integrity",
+    "article_3": "The recipes provided on this website are inspired by fictional content from 'The Elder Scrolls' series and should be interpreted as creative adaptations. While we strive to ensure accuracy in ingredient listings and instructions, all recipes are offered with the understanding that ingredient availability and preparation methods may vary. Users are encouraged to use their own discretion and judgment when preparing and consuming these dishes.",
+    "article_4_subheader": "Article IV: Technological Transmutation",
+    "article_4": "We are committed to maintaining the functionality and security of the website. However, we cannot guarantee that the site will always be free from technical issues or disruptions. Users are responsible for ensuring their own technology and internet connections are compatible with the site. We disclaim any liability for damages resulting from technological failures or interruptions that may affect your experience on the website.",
+    "article_5_subheader": "Article V: Community Coven Pact",
+    "article_5": "Users are encouraged to contribute to a positive and respectful community environment. Interaction with other users should be conducted with courtesy and respect. Any form of harassment, discrimination, or inappropriate behavior will not be tolerated. We reserve the right to remove or block users who engage in harmful activities and to take action against any breach of community standards.",
+    "article_6_subheader": "Article VI: Prohibited Potions",
+    "article_6": "Certain actions are strictly prohibited on this website. These include, but are not limited to, the unauthorized use or reproduction of content, the distribution of malware or harmful software, and engaging in fraudulent activities. Any user found violating these restrictions will face immediate suspension or termination of access. We reserve the right to pursue legal remedies for any damages or losses resulting from such prohibited activities.",
+    "final_sub_header": "all this jargon was generated with AI, you didn&apos;t think I would sit here and write all of this for you"
+  },
   "RecipePage": {
     "add_suggestion": "Add Suggestion",
     "add_filter": "Add Filter",
@@ -60,7 +76,6 @@
     "instructions": "Instructions",
     "call_to_action_5": "Watch instructional video"
   },
-
   "Footer": {
     "copy_right": "All rights unreserved",
     "terms": "Terms",

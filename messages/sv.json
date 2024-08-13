@@ -49,6 +49,22 @@
     "paragraph_4": "I grund och botten ville jag ha det här. Jag ville att den här webbplatsen nästan skulle vara ett kärleksbrev till dessa begåvade skapare såväl som till Elder Scrolls-världen där jag var uppslukad av ett tag nu, och ser tillbaka på med glädje, som ett retrospel eller ett barndomsminne.",
     "call_to_action_4": "Kolla in författarens hemsida"
   },
+  "TermsPage": {
+    "header_5": "Culinary Codex Covenant",
+    "article_1_subheader": "Artikel I: Gastronomisk Grimoire Access",
+    "article_1": "Genom att använda denna webbplats samtycker du till att vara bunden av de villkor som anges här. Denna webbplats ger tillgång till recept inspirerade av 'The Elder Scrolls: The Official Cookbook' av Chelsea Monroe-Cassel. Allt innehåll är endast avsett för personligt, icke-kommersiellt bruk. Otillåten duplicering, distribution eller utnyttjande av recepten eller tillhörande material är förbjudet. Alla ändringar eller anpassningar av innehållet måste godkännas skriftligen av webbplatsadministratören.",
+    "article_2_subheader": "Artikel II: Domänanvändning för digitala restauranger",
+    "article_2": "Din tillgång till och användning av denna webbplats omfattas av de användarvillkor som beskrivs här. Du samtycker till att använda webbplatsen endast för lagliga ändamål och på ett sätt som inte kränker andras rättigheter. Alla försök att störa webbplatsens funktion eller få obehörig åtkomst till användarkonton eller data är strängt förbjudna. Vi förbehåller oss rätten att stänga av eller avsluta åtkomsten till webbplatsen för alla användare som bryter mot dessa villkor. ",
+    "article_3_subheader": "Artikel III: Ingrediensintegritet",
+    "article_3": "Recepten på denna webbplats är inspirerade av fiktivt innehåll från 'The Elder Scrolls'-serien och bör tolkas som kreativa anpassningar. Även om vi strävar efter att säkerställa noggrannhet i ingrediensförteckningar och instruktioner, erbjuds alla recept med förståelse för att ingredienstillgänglighet och tillagningsmetoder kan variera. Användare uppmuntras att använda sitt eget omdöme och sin egen bedömning när de tillagar och konsumerar dessa rätter.",
+    "article_4_subheader": "Artikel IV: Teknisk Transmutation",
+    "article_4": "Vi åtar oss att upprätthålla webbplatsens funktionalitet och säkerhet. Vi kan dock inte garantera att webbplatsen alltid kommer att vara fri från tekniska problem eller störningar. Användarna ansvarar för att deras egen teknik och internetanslutning är kompatibel med webbplatsen. Vi frånsäger oss allt ansvar för skador till följd av tekniska fel eller avbrott som kan påverka din upplevelse av webbplatsen.",
+    "article_5_subheader": "Artikel V: Gemenskapspakten",
+    "article_5": "Användarna uppmuntras att bidra till en positiv och respektfull samhällsmiljö. Interaktion med andra användare bör ske med artighet och respekt. Alla former av trakasserier, diskriminering eller olämpligt beteende tolereras inte. Vi förbehåller oss rätten att ta bort eller blockera användare som ägnar sig åt skadliga aktiviteter och att vidta åtgärder mot alla överträdelser av gemenskapens normer.",
+    "article_6_subheader": "Artikel VI: Förbjudna drycker",
+    "article_6": "Vissa åtgärder är strängt förbjudna på denna webbplats. Dessa inkluderar, men är inte begränsade till, obehörig användning eller reproduktion av innehåll, distribution av skadlig kod eller skadlig programvara och deltagande i bedrägliga aktiviteter. Användare som bryter mot dessa restriktioner kommer omedelbart att stängas av eller få sin åtkomst indragen. Vi förbehåller oss rätten att vidta rättsliga åtgärder för eventuella skador eller förluster till följd av sådana förbjudna aktiviteter.",
+    "final_sub_header": "all denna jargong genererades med AI, du trodde inte att jag skulle sitta här och skriva allt detta åt dig"
+  },
   "RecipePage": {
     "add_suggestion": "Lägg till förslag",
     "add_filter": "Lägg till filter",
