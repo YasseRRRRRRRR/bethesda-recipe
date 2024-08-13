@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface Square {
   id: number;
@@ -77,10 +77,15 @@ const generateSquares = (): JSX.Element[] => {
     />
   ));
 };
-
 const ShuffleGrid: React.FC = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [squares, setSquares] = useState<JSX.Element[]>(generateSquares());
+
+  const shuffleSquares = useCallback(() => {
+    setSquares(generateSquares());
+
+    timeoutRef.current = setTimeout(shuffleSquares, 3000);
+  }, []);
 
   useEffect(() => {
     shuffleSquares();
@@ -90,18 +95,13 @@ const ShuffleGrid: React.FC = () => {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, []);
-
-  const shuffleSquares = () => {
-    setSquares(generateSquares());
-
-    timeoutRef.current = setTimeout(shuffleSquares, 3000);
-  };
+  }, [shuffleSquares]);
 
   return (
-    <div className=" hidden sm:grid p-6 lg:p-3 grid-cols-1 h-[1200px] sm:h-[700px] grid-rows-4 sm:grid-cols-2 sm:grid-rows-2  lg:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 lg:h-[450px] gap-1.5">
+    <div className="hidden sm:grid p-6 lg:p-3 grid-cols-1 h-[1200px] sm:h-[700px] grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 lg:h-[450px] gap-1.5">
       {squares.map((sq) => sq)}
     </div>
   );
 };
+
 export default ShuffleGrid;
