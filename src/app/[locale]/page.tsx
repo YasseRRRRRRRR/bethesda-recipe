@@ -79,7 +79,8 @@ export default async function Home({
                     </p>
                     <div className="flex items-center flex-wrap ">
                       <Link
-                        href={`${locale}/recipe/r92gce9sqgb0wjl`}
+                        // find a better way to link than just taking the actual id from the db and slappin it in the href
+                        href={`${locale}/recipe/qrtc30hkvu3iy6n`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         {t("ExamplesSection.call_to_action_2")}
@@ -154,7 +155,7 @@ export default async function Home({
                     </p>
                     <div className="flex items-center flex-wrap">
                       <Link
-                        href={`${locale}/recipe/lkfcrxn2zur8ivn`}
+                        href={`${locale}/recipe/ocvf2f0afvmo4tp`}
                         className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         {t("ExamplesSection.call_to_action_2")}
