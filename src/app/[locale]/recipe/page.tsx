@@ -18,7 +18,7 @@ import {
 import { getTranslations } from "next-intl/server";
 import SuggestionModal from "./component/suggestion";
 
-const pb = new PocketBase("http://127.0.0.1:8090");
+const pb = new PocketBase("https://afternoon-touch.pockethost.io");
 
 const getRecipes = async (
   query: string,

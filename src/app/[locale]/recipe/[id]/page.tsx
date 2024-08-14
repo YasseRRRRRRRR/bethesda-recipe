@@ -18,7 +18,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight, House } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-const pb = new PocketBase("http://127.0.0.1:8090");
+const pb = new PocketBase("https://afternoon-touch.pockethost.io/");
 
 const getSingleRecipe = async (recipeId: string) => {
   const record = await pb.collection("recipes").getOne(recipeId);
