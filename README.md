@@ -1,9 +1,9 @@
 ![image](https://github.com/user-attachments/assets/3dbb8b6f-b532-494e-9a96-f8e75e181a90)
+
 ## Description 
 This is a recipe website bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), that displays recipe's from the book [The Elder Scrolls: The Official Cookbook](https://www.amazon.com/Elder-Scrolls-Official-Cookbook/dp/1683833988), the front end was made using [Next.js](https://nextjs.org/) and pocketbase for the backend.
 
-See the demo: [`live preview of the site`](https://bethesda-recipe.vercel.app/en)
-
+### See Live Demo: [`PREVIEW`](https://bethesda-recipe.vercel.app/en)
 The full tech stack is:
 
 Front-End:
